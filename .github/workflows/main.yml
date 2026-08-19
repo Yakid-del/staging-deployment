@@ -5,15 +5,14 @@ on:
     branches:
       - main
 
-  jobs:
-    deploy:
-      runs-on: ubuntu-latest
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
-
-        - name: Test staging deployment
-          run: |
-            echo "Code checkout successful"
-            echo "Staging deployment pipeline is running"
+      - name: Test staging deployment
+        run: |
+          echo "Code checkout successful"
+          echo "Staging deployment pipeline is running"
